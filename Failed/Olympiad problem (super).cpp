@@ -33,9 +33,9 @@ vector<int> Encrypt(vector<int> userDB) {
 }
 
 vector<int> RegisterUser(vector<int> userDB, int mex) {
-    userDB.insert(userDB.end(), mex); // Регистрация пользователя
+    userDB.insert(userDB.end(), mex); // Р РµРіРёСЃС‚СЂР°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 
-    cout << "\nБаза данных до шифрования:\n";
+    cout << "\nР‘Р°Р·Р° РґР°РЅРЅС‹С… РґРѕ С€РёС„СЂРѕРІР°РЅРёСЏ:\n";
     Output(userDB);
 
     return userDB;
@@ -48,9 +48,9 @@ int main()
     vector<int> userDB = { 1, 3 };
     int userID;
 
-    cout << "\nВведите для запуска команды: \n";
-    cout << "1 - Зарегистрировать нового пользователя \n";
-    cout << "2 - Зашифровать данные \n";
+    cout << "\nР’РІРµРґРёС‚Рµ РґР»СЏ Р·Р°РїСѓСЃРєР° РєРѕРјР°РЅРґС‹: \n";
+    cout << "1 - Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ \n";
+    cout << "2 - Р—Р°С€РёС„СЂРѕРІР°С‚СЊ РґР°РЅРЅС‹Рµ \n";
 
     while (true)
     {
@@ -58,20 +58,20 @@ int main()
         cin >> commandNumber;
         switch (commandNumber) {
         case 1:
-            cout << "База данных до регистрации нового пользователя:\n";
+            cout << "Р‘Р°Р·Р° РґР°РЅРЅС‹С… РґРѕ СЂРµРіРёСЃС‚СЂР°С†РёРё РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ:\n";
             Output(userDB);
 
             userID = findMinimumMissingPositive(userDB);
             userDB = RegisterUser(userDB, userID);
-            cout << "\nВаш ID: " << userID << "\n";
-            cout << "\nВведите 1 или 2 для следующей команды: \n";
+            cout << "\nР’Р°С€ ID: " << userID << "\n";
+            cout << "\nР’РІРµРґРёС‚Рµ 1 РёР»Рё 2 РґР»СЏ СЃР»РµРґСѓСЋС‰РµР№ РєРѕРјР°РЅРґС‹: \n";
             break;
         case 2:
-            userDB = Encrypt(userDB); // Шифрование
+            userDB = Encrypt(userDB); // РЁРёС„СЂРѕРІР°РЅРёРµ
 
-            cout << "\nБаза данных после шифрования:\n";
+            cout << "\nР‘Р°Р·Р° РґР°РЅРЅС‹С… РїРѕСЃР»Рµ С€РёС„СЂРѕРІР°РЅРёСЏ:\n";
             Output(userDB); cout << "\n";
-            cout << "\nВведите 1 или 2 для следующей команды: \n";
+            cout << "\nР’РІРµРґРёС‚Рµ 1 РёР»Рё 2 РґР»СЏ СЃР»РµРґСѓСЋС‰РµР№ РєРѕРјР°РЅРґС‹: \n";
             break;
         default:
             return 0;
