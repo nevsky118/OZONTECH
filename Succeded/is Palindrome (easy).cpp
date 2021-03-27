@@ -16,12 +16,12 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	string str;
-	cout << "Ââåäèòå ñëîâî: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»Ð¾Ð²Ð¾: ";
 	cin >> str;
 	if (isPalindrome(str)) {
-		cout << "Ïàëèíäðîì.";
+		cout << "ÐŸÐ°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼.";
 	} else {
-		cout << "Íå ïàëèíäðîì.";
+		cout << "ÐÐµ Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼.";
 	}
 	return 0;
 }

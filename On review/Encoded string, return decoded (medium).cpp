@@ -1,3 +1,5 @@
+// Given an encoded string, return its decoded string.
+
 #include <iostream>
 #include <string>
 #include <stack>
@@ -8,7 +10,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     string str;
-    cout << "Ââåäèòå ñòðîêó: \n";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã°Ã®ÃªÃ³: \n";
     cin >> str;
 
     string decodedStr;
